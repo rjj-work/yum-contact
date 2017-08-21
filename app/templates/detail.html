@@ -1,0 +1,30 @@
+{{/*
+  Adapted from Contacts
+  Use of this source code is governed by the Apache 2.0
+  license that can be found in the LICENSE file.
+*/}}
+<h3>Contact</h3>
+
+<div class="btn-group">
+  <form action="/contacts/{{.ID}}:delete" method="post">
+    <a href="/contacts/{{.ID}}/edit" class="btn btn-primary btn-sm">
+      <i class="glyphicon glyphicon-edit"></i>
+      <span>Edit contact</span>
+    </a>
+    <button class="btn btn-danger btn-sm">
+      <i class="glyphicon glyphicon-trash"></i>
+      <span>Delete contact</span>
+    </button>
+  </form>
+</div>
+
+<div class="media">
+  <div class="media-body">
+    <h4>Name: {{.FirstName}} {{.LastName}}</h4>
+    <h5>Address {{if .Address}}{{.Address}}{{else}}unknown{{end}}</h5>
+    <h5>Email {{if .Email}}{{.Email}}{{else}}unknown{{end}}</h5>
+    <h5>Phone {{if .Phone}}{{.Phone}}{{else}}unknown{{end}}</h5>
+    <small>Added by {{.CreatedByDisplayName}}</small></br>
+    <small>Added on {{.CreatedDate}}</small>
+  </div>
+</div>

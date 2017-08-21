@@ -1,0 +1,86 @@
+{
+    "lang": "en", 
+    "status": {
+        "errorType": "success", 
+        "code": 200
+    }, 
+    "timestamp": "2017-08-21T00:03:01.908Z", 
+    "sessionId": "1486656220806", 
+    "result": {
+        "parameters": {
+             "given-name": "Homer",
+             "last-name": "Simpson"
+        },
+        "contexts": [
+          {
+            "name": "current_contact",
+            "parameters": {
+              "last_name.original": "Jackson",
+              "first_name.original": "Cali",
+              "last_name": "Jackson",
+              "first_name": "Cali"
+            },
+            "lifespan": 5
+          }
+        ],
+        "resolvedQuery": "find cali jackson",
+        "source": "agent", 
+        "score": 1.0, 
+        "speech": "", 
+
+        "fulfillment": {
+          "speech": "Trying to finding Cali",
+          "messages": [
+            {
+              "type": "simple_response",
+              "platform": "google",
+              "textToSpeech": "Trying to finding Cali"
+            },
+            {
+              "type": 0,
+              "speech": "Trying to finding Cali"
+            }
+          ]
+        },
+        "actionIncomplete": false, 
+        "action": "greetings", 
+        "metadata": {
+            "intentId": "334aea41-4daf-44c0-8c8f-ab0b246331ba",
+            "webhookForSlotFillingUsed": "false", 
+            "intentName": "find_contact", 
+            "webhookUsed": "true"
+        }
+    }, 
+    "id": "ab30d214-f4bb-4cdd-ae36-31caac7a6693", 
+    "originalRequest": {
+        "source": "google", 
+        "data": {
+            "inputs": [
+                {
+                    "raw_inputs": [
+                        {
+                            "query": "add ralph jack with address 121 Beaver Street, Kissimmee, FL 34743",
+                            "input_type": 2
+                        }
+                    ], 
+                    "intent": "assistant.intent.action.TEXT", 
+                    "arguments": [
+                        {
+                            "text_value": "add ralph jack with address 121 Beaver Street, Kissimmee, FL 34743",
+                            "raw_text": "add ralph jack with address 121 Beaver Street, Kissimmee, FL 34743",
+                            "name": "text"
+                        }
+                    ]
+                }
+            ], 
+            "user": {
+                "user_id": "PuQndWs1OMjUYwVJMYqwJv0/KT8satJHAUQGiGPDQ7A="
+            }, 
+            "conversation": {
+                "conversation_id": "1486656220807", 
+                "type": 2, 
+                "conversation_token": "[]"
+            }
+        }
+    }
+}

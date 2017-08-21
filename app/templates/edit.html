@@ -1,0 +1,32 @@
+{{/*
+  Adapted from Bookshelf
+  Use of this source code is governed by the Apache 2.0
+  license that can be found in the LICENSE file.
+*/}}
+<h3>{{if .}}Edit{{else}}Add{{end}} contact</h3>
+
+<form method="post" enctype="multipart/form-data" action="/contacts{{if .}}/{{.ID}}{{end}}">
+  <div class="form-group">
+    <label for="firstname">First Name</label>
+    <input class="form-control" name="firstname" id="firstname" value="{{.FirstName}}">
+  </div>
+  <div class="form-group">
+    <label for="lastname">Last Name</label>
+    <input class="form-control" name="lastname" id="lastname" value="{{.LastName}}">
+  </div>
+  <div class="form-group">
+    <label for="address">Address</label>
+    <input class="form-control" name="address" id="address" value="{{.Address}}">
+  </div>
+  <div class="form-group">
+    <label for="email">email</label>
+    <input class="form-control" name="email" id="email" value="{{.Email}}">
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone</label>
+    <input class="form-control" name="phone" id="phone" value="{{.Phone}}">
+  </div>
+  <button class="btn btn-success">Save</button>
+  <input type="hidden" name="createdBy" value="{{.CreatedBy}}">
+  <input type="hidden" name="createdByID" value="{{.CreatedByID}}">
+</form>
